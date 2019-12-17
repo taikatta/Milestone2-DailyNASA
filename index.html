@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NASA</title>
+    <script type="text/javascript" src="main.js"></script>
 </head>
-<body>
-    <div id="APOD"></div>
+
+<body onload="getDate()">
+    <div id="data"></div>
+
+    <p>
+        Starting date for asteroid search:
+        <input type="date" id="startDate">
+    </p>
+
+    <p>
+        Ending date for asteroid search:
+        <input type="date" id="endDate">
+    </p>
+
+    <p id="demo"></p>
+    <button onclick="myFunction()">Click me</button>
+
+
     <footer>
 
     </footer>
-    <script src="https://api.nasa.gov/planetary/apod?api_key=77d3ZAFkI96vA4EA6dPuFyNBI0sEDuI87tbTjTY9">
-    </script>
+    <!--  <script src="https://api.nasa.gov/planetary/apod?api_key=77d3ZAFkI96vA4EA6dPuFyNBI0sEDuI87tbTjTY9">
+    </script> -->
 </body>
-</html>
 
+</html>
