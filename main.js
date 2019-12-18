@@ -1,18 +1,17 @@
-function getDate() {
+$(window).bind("load", function() {
     let inputData = new Date();
     document.querySelector('#startDate').valueAsDate
         = inputData;
 
     document.querySelector('#endDate').valueAsDate
         = inputData;
-}
-
+});
 
 function myFunction() {
     document.getElementById("demo").innerHTML = "Hello World";
   }
 
-  
+
 var request = new XMLHttpRequest();
 START_DATE = '2019-03-04';
 END_DATE = '2019-03-05';
