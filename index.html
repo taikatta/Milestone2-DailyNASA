@@ -10,16 +10,18 @@
 </head>
 
 <body>
-    <div id="data"></div>
+   <!--  <div id="data"></div> -->
 
-    <div>
+    <div class="date-form">
         Starting date for asteroid search:
+        <!-- <input type="date" id="startDate" oninput="updateStartDate()"> -->
         <input type="date" id="startDate">
-
         <br/>
         Ending date for asteroid search:
         <input type="date" id="endDate">
     </div>
+
+    <ul id="nasa"></ul>
 
     <p id="demo"></p>
     <button onclick="myFunction()">Click me</button>
