@@ -1,23 +1,48 @@
-$(window).bind("load", function() {
-    let inputData = new Date();
-    document.querySelector('#startDate').valueAsDate
-        = inputData;
-
-    document.querySelector('#endDate').valueAsDate
-        = inputData;
-});
+//$(window).bind("load", function() {
+//    let inputData = new Date();
+//    document.querySelector('#startDate').valueAsDate
+//        = inputData;
+//
+ //   document.querySelector('#endDate').valueAsDate
+  //      = inputData;
+//});
 
 //function updateStartDate(event) {
 
 //}
 
+// Init date input
+document.getElementById('date-input').valueAsDate = new Date();
+
+document.getElementById('button').addEventListener('click', event => {
+  const date = document.getElementById('date-input').value;
+  
+  // Build url
+  const nasaUrl = new URL('https://api.nasa.gov/planetary/apod');
+  nasaUrl.searchParams.set('api_key', '77d3ZAFkI96vA4EA6dPuFyNBI0sEDuI87tbTjTY9');
+  nasaUrl.searchParams.set('date', date);
+
+  // Call api
+  fetch(nasaUrl.toString())
+    .then(response => response.json())
+    .then(response => {
+        if(response.media_type === "image") {
+      document.getElementById('pic-of-the-day').setAttribute('src', response.url);
+      document.getElementById('title').innerHTML = response.title;
+      document.getElementById('explanation').innerHTML = response.explanation;
+        } else {
+            document.getElementById('video-of-the-day').setAttribute('src', response.url);
+            document.getElementById('title').innerHTML = "hello";
+            document.getElementById('explanation').innerHTML = response.explanation;
+        }
+  });
+});
 
 
 
-
-function myFunction() {
-    document.getElementById("demo").innerHTML = "Hello World";
-  }
+//function myFunction() {
+  //  document.getElementById("demo").innerHTML = response.title;
+  //}
 
 
 //var request = new XMLHttpRequest();
@@ -34,20 +59,20 @@ function myFunction() {
 //}
 
 //request.send();
-START_DATE = '2019-03-04';
-END_DATE = '2019-03-04';
+//START_DATE = '2019-03-04';
+//END_DATE = '2019-03-04';
 
-const endpoint = 'https://api.nasa.gov/neo/rest/v1/feed?start_date=' + START_DATE + '&end_date=' + END_DATE + '&api_key=77d3ZAFkI96vA4EA6dPuFyNBI0sEDuI87tbTjTY9';
+//const endpoint = 'https://api.nasa.gov/neo/rest/v1/feed?start_date=' + START_DATE + '&end_date=' + END_DATE + '&api_key=77d3ZAFkI96vA4EA6dPuFyNBI0sEDuI87tbTjTY9';
 
 
 
-fetch(endpoint)
-  .then(resp => resp.json())
-  .then(data => {
-      let myData = data.near_earth_objects[START_DATE];
-      console.log(myData);
-})
-  .catch(error => console.error(error))
+//fetch(endpoint)
+//  .then(resp => resp.json())
+//  .then(data => {
+//      let myData = data.near_earth_objects[START_DATE];
+//      console.log(myData);
+//})
+//  .catch(error => console.error(error))
 
 
 
@@ -57,5 +82,5 @@ fetch(endpoint)
  // })
 
  // 3840692 console.table(myData[0].id);
- //myData[0].estimated_diameter.kilometers.estimated_diameter_min
+ //myData[0].estimated_diameter.meters.estimated_diameter_min
  //is_potentially_hazardous_asteroid
