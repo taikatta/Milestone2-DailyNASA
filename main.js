@@ -19,7 +19,7 @@ document.getElementById('button').addEventListener('click', event => {
   
   // Build url
   const nasaUrl = new URL('https://api.nasa.gov/planetary/apod');
-  nasaUrl.searchParams.set('api_key', '77d3ZAFkI96vA4EA6dPuFyNBI0sEDuI87tbTjTY9');
+  nasaUrl.searchParams.set('api_key', 'DEMO_KEY');
   nasaUrl.searchParams.set('date', date);
 
   // Call api
@@ -32,7 +32,7 @@ document.getElementById('button').addEventListener('click', event => {
       document.getElementById('explanation').innerHTML = response.explanation;
         } else {
             document.getElementById('video-of-the-day').setAttribute('src', response.url);
-            document.getElementById('title').innerHTML = "hello";
+            document.getElementById('title').innerHTML = response.title;
             document.getElementById('explanation').innerHTML = response.explanation;
         }
   });
@@ -50,7 +50,7 @@ document.getElementById('button').addEventListener('click', event => {
 //END_DATE = '2019-03-04';
 //
 //str = 'https://';
-//request.open('GET', str.concat('api.nasa.gov/neo/rest/v1/feed?start_date=', START_DATE, '&end_date=', END_DATE, '&api_key=77d3ZAFkI96vA4EA6dPuFyNBI0sEDuI87tbTjTY9'));
+//request.open('GET', str.concat('api.nasa.gov/neo/rest/v1/feed?start_date=', START_DATE, '&end_date=', END_DATE, '&api_key='));
 //
 //request.onload = function () {
 //    var data = JSON.parse(this.response);
@@ -62,7 +62,7 @@ document.getElementById('button').addEventListener('click', event => {
 //START_DATE = '2019-03-04';
 //END_DATE = '2019-03-04';
 
-//const endpoint = 'https://api.nasa.gov/neo/rest/v1/feed?start_date=' + START_DATE + '&end_date=' + END_DATE + '&api_key=77d3ZAFkI96vA4EA6dPuFyNBI0sEDuI87tbTjTY9';
+//const endpoint = 'https://api.nasa.gov/neo/rest/v1/feed?start_date=' + START_DATE + '&end_date=' + END_DATE + '&api_key=';
 
 
 
