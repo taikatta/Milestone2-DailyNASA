@@ -1,41 +1,53 @@
-//$(window).bind("load", function() {
-//    let inputData = new Date();
-//    document.querySelector('#startDate').valueAsDate
-//        = inputData;
-//
- //   document.querySelector('#endDate').valueAsDate
-  //      = inputData;
-//});
-
-//function updateStartDate(event) {
-
-//}
-
 // Init date input
 document.getElementById('date-input').valueAsDate = new Date();
 
 document.getElementById('button').addEventListener('click', event => {
-  const date = document.getElementById('date-input').value;
-  
-  // Build url
-  const nasaUrl = new URL('https://api.nasa.gov/planetary/apod');
-  nasaUrl.searchParams.set('api_key', 'DEMO_KEY');
-  nasaUrl.searchParams.set('date', date);
+    var date = document.getElementById('date-input').value;
+    const today = new Date().toISOString().substring(0,10);
 
-  // Call api
-  fetch(nasaUrl.toString())
-    .then(response => response.json())
-    .then(response => {
-        if(response.media_type === "image") {
-      document.getElementById('pic-of-the-day').setAttribute('src', response.url);
-      document.getElementById('title').innerHTML = response.title;
-      document.getElementById('explanation').innerHTML = response.explanation;
-        } else {
-            document.getElementById('video-of-the-day').setAttribute('src', response.url);
-            document.getElementById('title').innerHTML = response.title;
-            document.getElementById('explanation').innerHTML = response.explanation;
-        }
-  });
+    if(today < date){
+        var date = today;
+    }
+
+    // Build url
+    const nasaUrl = new URL('https://api.nasa.gov/planetary/apod');
+    nasaUrl.searchParams.set('api_key', 'DEMO_KEY');
+    nasaUrl.searchParams.set('date', date);
+
+    // Call api
+    fetch(nasaUrl.toString())
+        .then(response => response.json())
+        .then(response => {
+            idejon = document.getElementById('idejon')
+            current_media = document.getElementById('media_from_nasa')
+            if (response.media_type === "image") {
+                element = document.createElement("img")
+                element.setAttribute('src', response.url);
+                element.setAttribute('width', 420)
+                element.setAttribute('height', 315)
+                element.setAttribute('id', 'media_from_nasa')
+                if (current_media) {
+                    idejon.replaceChild(element, current_media)
+                } else {
+                    idejon.appendChild(element)
+                }
+                document.getElementById('title').innerHTML = response.title;
+                document.getElementById('explanation').innerHTML = response.explanation;
+            } else {
+                element = document.createElement("iframe")
+                element.setAttribute('src', response.url)
+                element.setAttribute('width', 420)
+                element.setAttribute('height', 315)
+                element.setAttribute('id', 'media_from_nasa')
+                if (current_media) {
+                    idejon.replaceChild(element, current_media)
+                } else {
+                    idejon.appendChild(element)
+                }
+                document.getElementById('title').innerHTML = response.title;
+                document.getElementById('explanation').innerHTML = response.explanation;
+            }
+        });
 });
 
 
