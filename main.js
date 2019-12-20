@@ -1,13 +1,9 @@
 // Init date input
-document.getElementById('date-input').valueAsDate = new Date();
+dateinput.max = new Date().toISOString().split("T")[0];
+document.getElementById('dateinput').valueAsDate = new Date();
 
 document.getElementById('button').addEventListener('click', event => {
-    var date = document.getElementById('date-input').value;
-    const today = new Date().toISOString().substring(0,10);
-
-    if(today < date){
-        var date = today;
-    }
+    const date = document.getElementById('dateinput').value;
 
     // Build url
     const nasaUrl = new URL('https://api.nasa.gov/planetary/apod');
