@@ -15,7 +15,7 @@ document.getElementById('button').addEventListener('click', event => {
     fetch(nasaUrl.toString())
         .then(response => response.json())
         .then(response => {
-            idejon = document.getElementById('idejon')
+            APOD = document.getElementById('APOD')
             current_media = document.getElementById('media_from_nasa')
             if (response.media_type === "image") {
                 element = document.createElement("img")
@@ -24,9 +24,9 @@ document.getElementById('button').addEventListener('click', event => {
                 element.setAttribute('height', 315)
                 element.setAttribute('id', 'media_from_nasa')
                 if (current_media) {
-                    idejon.replaceChild(element, current_media)
+                    APOD.replaceChild(element, current_media)
                 } else {
-                    idejon.appendChild(element)
+                    APOD.appendChild(element)
                 }
                 document.getElementById('title').innerHTML = response.title;
                 document.getElementById('explanation').innerHTML = response.explanation;
@@ -37,12 +37,13 @@ document.getElementById('button').addEventListener('click', event => {
                 element.setAttribute('height', 315)
                 element.setAttribute('id', 'media_from_nasa')
                 if (current_media) {
-                    idejon.replaceChild(element, current_media)
+                    APOD.replaceChild(element, current_media)
                 } else {
-                    idejon.appendChild(element)
+                    APOD.appendChild(element)
                 }
                 document.getElementById('title').innerHTML = response.title;
                 document.getElementById('explanation').innerHTML = response.explanation;
             }
         });
 });
+

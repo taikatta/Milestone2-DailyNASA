@@ -6,27 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NASA</title>
-
 </head>
 
 <body>
-    <h3>Astronomy Picture of the Day</h3>
-    <input type="date" id="dateinput">
-    <br />
-    <button id="button">get pic</button>
-    <br />
-    <div id="idejon">
+
+    <div id="APOD">
+        <h3>Astronomy Picture of the Day</h3>
+        <p>Each day a different image or photograph is featured, please select the date:</p>
+        <input type="date" id="dateinput">
+        <br />
+        <button id="button">get pic</button>
+        <br />
         <img src="nasa.png" id="media_from_nasa" width="420" title="Nasa logo">
+        <p id="title"></p>
+        <p id="explanation"></p>
     </div>
     <br />
-    <p id="title"></p>
-    <p id="explanation"></p>
-    
+    <div id="neo">
+        <h3>Near Earth Object</h3>
+        <input type="date" id="neoinput">
+        <br />
+        <button id="button1">NEO date</button>
+        <br />
+        <p id="yourneo"></p>
+    </div>
+
+
     <footer>
 
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="neo.js"></script>
 </body>
 
 </html>
