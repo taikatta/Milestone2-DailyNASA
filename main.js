@@ -1,5 +1,6 @@
 // Init date input
-dateinput.max = new Date().toISOString().split("T")[0];
+// Disable future dates, the solution is from: https://stackoverflow.com/
+dateinput.max = new Date().toISOString().split("T")[0]; 
 document.getElementById('dateinput').valueAsDate = new Date();
 
 document.getElementById('button').addEventListener('click', event => {
