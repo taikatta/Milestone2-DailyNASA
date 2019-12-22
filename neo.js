@@ -17,26 +17,33 @@ document.getElementById('button1').addEventListener('click', event => {
     fetch(neoUrl.toString())
         .then(response => response.json())
         .then(response => {
-
-            let adat = response.near_earth_objects[START_DATE];
+            let data = response.near_earth_objects[START_DATE];
             let darab = response.element_count;
             var i = 0;
+            var hazardous = false;
+            var biggest = 0;
             do {
-                console.log(adat[i].name);
-                console.log(adat[i].is_potentially_hazardous_asteroid);
-                console.log(adat[i].estimated_diameter.meters.estimated_diameter_min);
-  
+                // Check for potentially hazardous asteroid
+                if(data[i].is_potentially_hazardous_asteroid === true) {
+                    hazardous = true;
+                    var hazardous_name = data[i].name;
+                }
+                // Find the biggest asteroid
+                if(biggest < data[i].estimated_diameter.meters.estimated_diameter_max) {
+                    var biggest = data[i].estimated_diameter.meters.estimated_diameter_max;
+                }
                 i++;
             }
             while (i < darab);
-            
-            
-            document.getElementById('yourneo').innerHTML = response.element_count;
+            if(hazardous) {
+                var danger = "is";
+                var danger_name = ", its name is: " + hazardous_name + ".";
+            } else {
+                var danger = "is no";
+                var danger_name = ".";
+            }
+            document.getElementById('yourneo').innerHTML = "On "+ date + " the number of near Earth objects is: " + 
+                response.element_count + ". Estimated maximum diameter is: " + biggest.toFixed(2) + " meter. There " + 
+                danger + " potentially hazardous asteroid among them" + danger_name;
         });
 });
-
-//document.getElementsByClassName('yourneo').innerHTML = adat[i].name;
-//element_count
-//estimated_diameter.meters.estimated_diameter_min
-//is_potentially_hazardous_asteroid
-//near_earth_objects date 

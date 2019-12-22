@@ -17,6 +17,8 @@ document.getElementById('button').addEventListener('click', event => {
         .then(response => {
             APOD = document.getElementById('APOD')
             current_media = document.getElementById('media_from_nasa')
+
+            //Check if today's media is image or video
             if (response.media_type === "image") {
                 element = document.createElement("img")
                 element.setAttribute('src', response.url);
