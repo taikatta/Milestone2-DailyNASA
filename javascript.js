@@ -1,10 +1,41 @@
 // Init date input
 // Disable future dates, the solution is from: https://stackoverflow.com/
-neoinput.max = new Date().toISOString().split("T")[0]; 
-document.getElementById('neoinput').valueAsDate = new Date();
+dateinput.max = new Date().toISOString().split("T")[0];
+document.getElementById('dateinput').valueAsDate = new Date();
 
-document.getElementById('button1').addEventListener('click', event => {
-    const date = document.getElementById('neoinput').value;
+document.getElementById('button').addEventListener('click', event => {
+    const date = document.getElementById('dateinput').value;
+
+    // Build url
+    const nasaUrl = new URL('https://api.nasa.gov/planetary/apod');
+    nasaUrl.searchParams.set('api_key', '77d3ZAFkI96vA4EA6dPuFyNBI0sEDuI87tbTjTY9');
+    nasaUrl.searchParams.set('date', date);
+
+    // Call api
+    fetch(nasaUrl.toString())
+        .then(response => response.json())
+        .then(response => {
+            const APOD = document.getElementById('APOD')
+            const media = document.getElementById('media_from_nasa')
+
+            //Check if today's media is image or video
+            const mediaElement = response.media_type === 'image' ? 'img' : 'iframe';
+
+            element = document.createElement(mediaElement);
+            element.setAttribute('src', response.url);
+            element.setAttribute('id', 'media_from_nasa')
+            if (media) {
+                APOD.replaceChild(element, media)
+            } else {
+                APOD.appendChild(element)
+            }
+            document.getElementById('title').textContent = response.title;
+            document.getElementById('explanation').textContent = response.explanation;
+
+        });
+
+
+
 
     // Build url
     let START_DATE = date;
@@ -38,7 +69,7 @@ document.getElementById('button1').addEventListener('click', event => {
             var danger = hazardous ? "is" : "is no";
             var danger_name = hazardous ? ", its name is: " + hazardous_name + "." : ".";
 
-            document.getElementById('yourneo').textContent = "On "+ date + " the number of near Earth objects is: " + 
+            document.getElementById('yourneo').textContent = "Near Earth Objects. On "+ date + " the number of near Earth objects is: " + 
                 response.element_count + ". Estimated maximum diameter is: " + biggest.toFixed(2) + " meter. There " + 
                 danger + " potentially hazardous asteroid among them" + danger_name;
         });

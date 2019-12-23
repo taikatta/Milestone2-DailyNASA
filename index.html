@@ -12,8 +12,9 @@
 <body>
 
     <div id="APOD">
+        <h1>Daily NASA</h1>
         <h3>Astronomy Picture of the Day</h3>
-        <p>Each day a different image or photograph is featured, please select the date:</p>
+        <p>Each day a different image or video is featured, please select the date:</p>
         <input type="date" id="dateinput">
         <br />
         <button id="button">Get picture of the day</button>
@@ -21,22 +22,18 @@
         <img src="nasa.png" id="media_from_nasa" title="Nasa logo">
         <p id="title"></p>
         <p id="explanation"></p>
-    </div>
-    <br />
-    <div id="neo">
-        <h3>Near Earth Objects</h3>
-        <input type="date" id="neoinput">
-        <br />
-        <button id="button1">Get information about Near Earth Objects</button>
-        <br />
         <p id="yourneo"></p>
     </div>
 
     <footer>
     </footer>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-    <script type="text/javascript" src="main.js"></script>
-    <script type="text/javascript" src="neo.js"></script>
+    <!-- <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="neo.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="javascript.js"></script>
 </body>
 
 </html>
