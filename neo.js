@@ -5,7 +5,7 @@ document.getElementById('neoinput').valueAsDate = new Date();
 
 document.getElementById('button1').addEventListener('click', event => {
     const date = document.getElementById('neoinput').value;
-
+    
     // Build url
     let START_DATE = date;
     let END_DATE = date;
@@ -35,13 +35,9 @@ document.getElementById('button1').addEventListener('click', event => {
                 i++;
             }
             while (i < darab);
-            if(hazardous) {
-                var danger = "is";
-                var danger_name = ", its name is: " + hazardous_name + ".";
-            } else {
-                var danger = "is no";
-                var danger_name = ".";
-            }
+            var danger = hazardous ? "is" : "is no";
+            var danger_name = hazardous ? ", its name is: " + hazardous_name + "." : ".";
+
             document.getElementById('yourneo').textContent = "On "+ date + " the number of near Earth objects is: " + 
                 response.element_count + ". Estimated maximum diameter is: " + biggest.toFixed(2) + " meter. There " + 
                 danger + " potentially hazardous asteroid among them" + danger_name;
