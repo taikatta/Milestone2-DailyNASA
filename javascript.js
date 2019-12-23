@@ -34,9 +34,6 @@ document.getElementById('button').addEventListener('click', event => {
 
         });
 
-
-
-
     // Build url
     let START_DATE = date;
     let END_DATE = date;
