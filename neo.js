@@ -42,7 +42,7 @@ document.getElementById('button1').addEventListener('click', event => {
                 var danger = "is no";
                 var danger_name = ".";
             }
-            document.getElementById('yourneo').innerHTML = "On "+ date + " the number of near Earth objects is: " + 
+            document.getElementById('yourneo').textContent = "On "+ date + " the number of near Earth objects is: " + 
                 response.element_count + ". Estimated maximum diameter is: " + biggest.toFixed(2) + " meter. There " + 
                 danger + " potentially hazardous asteroid among them" + danger_name;
         });

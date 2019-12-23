@@ -1,3 +1,13 @@
 body {
     /* background-image: url('star1.jpg'); */
 }
+
+img {
+    width: 50%;
+    height: auto;
+}
+
+iframe {
+    height: 300px;
+    width: 50%;
+}
