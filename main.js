@@ -16,31 +16,22 @@ document.getElementById('button').addEventListener('click', event => {
         .then(response => response.json())
         .then(response => {
             const APOD = document.getElementById('APOD')
-            const current_media = document.getElementById('media_from_nasa')
+            const media = document.getElementById('media_from_nasa')
 
             //Check if today's media is image or video
-            if (response.media_type === "image") {
-                const element = document.createElement("img");
-                element.setAttribute('src', response.url);
-                element.setAttribute('id', 'media_from_nasa');
-                if (current_media) {
-                    APOD.replaceChild(element, current_media);
-                } else {
-                    APOD.appendChild(element);
-                }
-            } else {
-                const element = document.createElement("iframe");
-                element.setAttribute('src', response.url);
-                element.setAttribute('id', 'media_from_nasa');
-                if (current_media) {
-                    APOD.replaceChild(element, current_media);
-                } else {
-                    APOD.appendChild(element);
-                }
-            }
+            const mediaElement = response.media_type === 'image' ? 'img' : 'iframe';
 
+            element = document.createElement(mediaElement);
+            element.setAttribute('src', response.url);
+            element.setAttribute('id', 'media_from_nasa')
+            if (media) {
+                APOD.replaceChild(element, media)
+            } else {
+                APOD.appendChild(element)
+            }
             document.getElementById('title').textContent = response.title;
             document.getElementById('explanation').textContent = response.explanation;
+
         });
 });
 
