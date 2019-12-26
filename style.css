@@ -1,11 +1,11 @@
 #APOD img {
-    width: 90%;
+    width: 100%;
     height: auto;
-    margin: 20px;
+    padding: 0 !important;
 }
 
 iframe {
-    height: 350px;
+    height: 400px;
     width: 90%;
     margin: 20px;
 }
@@ -32,6 +32,6 @@ iframe {
 }
 
 .daily-picture {
-    padding: 40px;
+
 }
 
