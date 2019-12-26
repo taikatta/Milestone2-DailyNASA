@@ -1,24 +1,37 @@
-img {
-    width: 70%;
+#APOD img {
+    width: 90%;
     height: auto;
+    margin: 20px;
 }
 
 iframe {
     height: 350px;
-    width: 70%;
+    width: 90%;
+    margin: 20px;
 }
 
 .date-picker {
-    padding: 20px;
+    margin-top: 20px;
 }
 
 #dateinput {
     color: #103E94;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .far.fa-calendar-alt {
     float: left;
     color: #103E94;
     font-size: 20px !important;
+}
+
+#title, #explanation, #yourneo {
+    width: 100%;
+    text-align: justify;
+}
+
+.daily-picture {
+    padding: 40px;
 }
 
