@@ -16,6 +16,7 @@
 #button.toggle, 
 #dateinput.toggle {
     background-color: white;
+    border-color: black;
 }
 
 .far.fa-calendar-alt {
@@ -67,7 +68,7 @@ h3 {
     background: url(hubble-observes-one-of-a-kind-star-nicknamed-nasty.jpg) no-repeat center fixed;
     color: #C3DAF7;
     padding: 20px 20px 0px 20px;
-    margin: 0;
+    /* margin: 0;
     background-attachment: scroll;
     background-position: center;
     -webkit-background-size: cover;
@@ -75,7 +76,7 @@ h3 {
     -o-background-size: cover;
     background-size: cover;
     align-items: center;
-    justify-content:center;
+    justify-content:center; */
 }
 
 .daily-picture.toggle {
