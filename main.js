@@ -15,6 +15,7 @@ document.getElementById('button').addEventListener('click', event => {
     fetch(nasaUrl.toString())
         .then(response => response.json())
         .then(response => {
+            $('.daily-picture').toggleClass('toggle');
             const APOD = document.getElementById('photo')
             const media = document.getElementById('media_from_nasa')
 
