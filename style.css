@@ -13,10 +13,20 @@
     border-color: #425F89;
 }
 
+#button.toggle, 
+#dateinput.toggle {
+    background-color: white;
+}
+
 .far.fa-calendar-alt {
     color: #C3DAF7;
     font-size: 20px !important;
 }
+
+.far.fa-calendar-alt.toggle {
+    color: black;
+}
+
 
 #title, #explanation, #yourneo {
     width: 100%;
@@ -66,9 +76,9 @@ h3 {
     background-size: cover;
     align-items: center;
     justify-content:center;
-    position: relative;
 }
 
 .daily-picture.toggle {
     background: none;
+    color: black;
 }

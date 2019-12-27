@@ -16,6 +16,9 @@ document.getElementById('button').addEventListener('click', event => {
         .then(response => response.json())
         .then(response => {
             $('.daily-picture').toggleClass('toggle');
+            $('#dateinput').toggleClass('toggle');
+            $('#button').toggleClass('toggle');
+            $('.far.fa-calendar-alt').toggleClass('toggle');
             const APOD = document.getElementById('photo')
             const media = document.getElementById('media_from_nasa')
 
