@@ -4,12 +4,12 @@
 
 #button {
     margin-top: 10px;
-    background-color: #C3DAF7;
+    background-color: #7190b0;
     border-color: #425F89;
 }
 
 #dateinput {
-    background-color:#C3DAF7;
+    background-color:#7190b0;
     border-color: #425F89;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .far.fa-calendar-alt {
-    color: #C3DAF7;
+    color: #7190b0;
     font-size: 20px !important;
 }
 
