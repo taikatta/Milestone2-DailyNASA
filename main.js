@@ -35,7 +35,6 @@ document.getElementById('button').addEventListener('click', event => {
             }
             document.getElementById('title').textContent = response.title;
             document.getElementById('explanation').textContent = response.explanation;
-
         });
 
     // Build url
@@ -70,7 +69,7 @@ document.getElementById('button').addEventListener('click', event => {
             var danger = hazardous ? "is" : "is no";
             var danger_name = hazardous ? ", its name is: " + hazardous_name + "." : ".";
 
-            document.getElementById('yourneo').textContent = "Near Earth Objects. On "+ date + " the number of near Earth objects is: " + 
+            document.getElementById('yourneo').textContent = "Near Earth Objects. On " + date + " the number of near Earth objects is: " + 
                 response.element_count + ". Estimated maximum diameter is: " + biggest.toFixed(2) + " meter. There " + 
                 danger + " potentially hazardous asteroid among them" + danger_name;
         });

@@ -1,14 +1,16 @@
+.navbar, footer{
+    background-color: #C3DAF7 !important;
+}
+
 .date-picker {
     padding: 20px;
 }
 
 #button {
     margin-top: 10px;
-    background-color: #7190b0;
-    border-color: #425F89;
 }
 
-#dateinput {
+#dateinput, #button {
     background-color:#7190b0;
     border-color: #425F89;
 }
@@ -65,8 +67,8 @@ h3 {
 }
 
 .daily-picture {
-    background: url('stars.jpg') no-repeat center fixed;
-    color: #C3DAF7;
+    background: url('stars.jpg');
+    color: #C3DAF7; 
     padding: 20px 20px 0px 20px;
     margin: 0;
     background-attachment: scroll;
@@ -82,4 +84,13 @@ h3 {
 .daily-picture.toggle {
     background: none;
     color: black;
+}
+
+footer img {
+    height: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 0px;
 }
