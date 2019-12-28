@@ -1,5 +1,12 @@
-.navbar, footer{
+header, footer{
     background-color: #C3DAF7 !important;
+}
+
+header {
+    height: 3em;
+    text-align: left;
+    padding-top: 0.7em;
+    padding-left: 4em;
 }
 
 .daily-picture {
