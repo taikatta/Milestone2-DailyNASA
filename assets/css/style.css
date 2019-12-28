@@ -67,7 +67,7 @@ h3 {
 }
 
 .daily-picture {
-    background: url('stars.jpg');
+    background: url('../images/stars.jpg');
     color: #C3DAF7; 
     padding: 20px 20px 0px 20px;
     margin: 0;
