@@ -15,21 +15,10 @@
     border-color: #425F89;
 }
 
-#button.toggle, 
-#dateinput.toggle {
-    background-color: white;
-    border-color: black;
-}
-
 .far.fa-calendar-alt {
     color: #7190b0;
     font-size: 20px !important;
 }
-
-.far.fa-calendar-alt.toggle {
-    color: black;
-}
-
 
 #title, #explanation, #yourneo {
     width: 100%;
@@ -37,11 +26,6 @@
     padding: 10px;
     margin: 0;
 }
-/*
-h3 {
-    padding: 20px 20px 0px 20px;
-    margin: 0;
-} */
 
 /* Embed video height https://stackoverflow.com/questions/35814653/automatic-height-when-embedding-a-youtube-video */
 #photo {
@@ -80,11 +64,6 @@ h3 {
     justify-content:center;
 }
 
-.daily-picture.toggle {
-    background: none;
-    color: black;
-}
-
 footer img {
     height: 12px;
 }
@@ -94,11 +73,11 @@ footer {
     padding: 0px;
 }
 
-.expl_text {
+#expl_text {
     margin: 1em 0em;
 }
 
-.expl_text.toggle {
+.expl_text1 {
     display: none;
 }
 

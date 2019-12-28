@@ -15,11 +15,8 @@ document.getElementById('button').addEventListener('click', event => {
     fetch(nasaUrl.toString())
         .then(response => response.json())
         .then(response => {
-            $('.daily-picture').toggleClass('toggle');
-            $('#dateinput').toggleClass('toggle');
-            $('#button').toggleClass('toggle');
-            $('.far.fa-calendar-alt').toggleClass('toggle');
-            $('.expl_text').toggleClass('toggle');
+            document.getElementById("expl_text").className = "expl_text1";
+
             const APOD = document.getElementById('photo')
             const media = document.getElementById('media_from_nasa')
 
