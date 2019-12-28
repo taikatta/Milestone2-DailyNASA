@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap:100, 200, 300, 400, 500, 600, 700');
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
 header, footer{
     background-color: #C3DAF7 !important;
 }
