@@ -95,6 +95,6 @@ footer {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     #photo {
-        margin: 5%;
+        margin: 0 5%;
     }
   } 
