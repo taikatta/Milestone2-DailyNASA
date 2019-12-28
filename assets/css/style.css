@@ -2,6 +2,28 @@
     background-color: #C3DAF7 !important;
 }
 
+.daily-picture {
+    background: url('../images/stars.jpg') no-repeat center fixed; 
+    color: #C3DAF7;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 20px 20px 0px 20px;
+    margin: 0;
+    background-attachment: scroll;
+    align-items: center; 
+    justify-content:center;
+}
+
+#expl_text {
+    margin: 1em 0em;
+}
+
+.expl_text1 {
+    display: none;
+}
+
 .date-picker {
     padding: 20px;
 }
@@ -18,13 +40,6 @@
 .far.fa-calendar-alt {
     color: #7190b0;
     font-size: 20px !important;
-}
-
-#title, #explanation, #yourneo {
-    width: 100%;
-    text-align: justify;
-    padding: 10px;
-    margin: 0;
 }
 
 /* Embed video height https://stackoverflow.com/questions/35814653/automatic-height-when-embedding-a-youtube-video */
@@ -50,18 +65,11 @@
     height: 100%;
 }
 
-.daily-picture {
-    background: url('../images/stars.jpg') no-repeat center fixed; 
-    color: #C3DAF7;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    padding: 20px 20px 0px 20px;
+#title, #explanation, #yourneo {
+    width: 100%;
+    text-align: justify;
+    padding: 10px;
     margin: 0;
-    background-attachment: scroll;
-    align-items: center; 
-    justify-content:center;
 }
 
 footer img {
@@ -70,14 +78,5 @@ footer img {
 
 footer {
     text-align: center;
-    padding: 0px;
+    padding: 0.5em;
 }
-
-#expl_text {
-    margin: 1em 0em;
-}
-
-.expl_text1 {
-    display: none;
-}
-
