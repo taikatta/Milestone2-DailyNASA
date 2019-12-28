@@ -84,3 +84,10 @@ footer {
     padding: 0.5em;
     color: #043C93;
 }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #photo {
+        margin: 5%;
+    }
+  } 
