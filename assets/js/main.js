@@ -4,7 +4,14 @@ dateinput.max = new Date().toISOString().split("T")[0];
 document.getElementById('dateinput').valueAsDate = new Date();
 
 document.getElementById('button').addEventListener('click', event => {
+    document.getElementById('data-pro').innerHTML = "";
     const date = document.getElementById('dateinput').value;
+
+    // Warning if date is earlier then 1995-06-16 or is a future date
+    if(date < "1995-06-16" || date > new Date().toISOString().split("T")[0]) {
+        document.getElementById('data-pro').innerHTML = "Please enter a date between 16/06/1995 and today!";
+        return;
+    }
 
     // Build url
     const nasaUrl = new URL('https://api.nasa.gov/planetary/apod');
