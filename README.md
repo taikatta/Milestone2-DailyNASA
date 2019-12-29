@@ -105,14 +105,14 @@ This project was developed using the Visual Studio Code.
 This website is hosted using GitHub pages, deployed directly from the master branch. Every time I made a change to the site, I used commited to git and pushed to GitHub.
 
 #### How to enable GitHub Pages to publish your site
-* Select the [Repository](https://github.com/taikatta/Milestone1-Konyvkucko)
+* Select the [Repository](https://github.com/taikatta/Milestone2-DailyNASA)
 * Under the repository name click `Settings` 
 * Find `GitHub Pages` section
 * From the drop-down menu select `master`
 * Click `Save`
 
 #### How to clone your repository to create a local copy
-* Select the [Repository](https://github.com/taikatta/Milestone1-Konyvkucko)
+* Select the [Repository](https://github.com/taikatta/Milestone2-DailyNASA)
 * Click on the 'Clone or Download' button
 * Copy the URL provided
 * Open terminal (Mac) / Open Git Bash (Windows) 
