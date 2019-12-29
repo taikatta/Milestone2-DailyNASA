@@ -1,4 +1,4 @@
-# DailyNASA
+# Daily NASA
 
 This is my second Milestone Project on the Full Stack Web Developer Code Institute course. For Interactive Frontend Development module.
 
@@ -74,6 +74,59 @@ Desktop View
 * To prevent user to pick a future date from the calendar I got the solution from: [stackoverflow](https://stackoverflow.com/) But this was not enough, as it turned out that NASA only had images from 16-06-1995, now if the user selects a date which is before this date or after today's date, there is a warning sign saying: "Please enter a date between 16/06/1995 and today!".
 
 * The first problem while writing the JavaScript appeared when I noticed that the Picture of the day sometimes is not a picture but a video. As I used <img> in my HTML it was not possible to play the video. I used replaceChild and appendChild to resolve this problem.
+
+* After successfully displaying the Picture of the Day (either it was an image or a video) I noticed that the height of the video was not set correctly. I have found the solution on [stackoverflow](https://stackoverflow.com/questions/35814653/automatic-height-when-embedding-a-youtube-video) 
+
+* At the Picture of the Day there is the Title of the picture and a short Explanation.
+
+* After the image, title and explanation of the Picture of the Day, I added some information about near earth asteroids. On the chosen date the user will know the number of near Earth objects, the estimated maximum diameter of the largest asteroid and if there is potentially hazardous asteroid among them.
+
+#### Features Left to Implement
+
+
+## Technologies
+
+* HTML5 
+* CSS
+* JavaScript
+* Visual Studio Code
+* Git - used for version control
+* [GitHub](https://github.com/) 
+* [Font Awesome](https://fontawesome.com/) 
+* [Google Fonts](https://fonts.google.com/) 
+* [moquaps](https://moqups.com)
+
+## Testing
+
+## Deployment
+
+This project was developed using the Visual Studio Code.
+
+This website is hosted using GitHub pages, deployed directly from the master branch. Every time I made a change to the site, I used commited to git and pushed to GitHub.
+
+#### How to enable GitHub Pages to publish your site
+* Select the [Repository](https://github.com/taikatta/Milestone1-Konyvkucko)
+* Under the repository name click `Settings` 
+* Find `GitHub Pages` section
+* From the drop-down menu select `master`
+* Click `Save`
+
+#### How to clone your repository to create a local copy
+* Select the [Repository](https://github.com/taikatta/Milestone1-Konyvkucko)
+* Click on the 'Clone or Download' button
+* Copy the URL provided
+* Open terminal (Mac) / Open Git Bash (Windows) 
+* Find the directory you want to clone the repository to
+* Type `git clone` and paste the URL, press Enter
+* Your local clone has be created
+
+## Credits
+
+#### Media
+
+All photos are from NASA.gov
+
+#### Acknowledgements
 
 
 
