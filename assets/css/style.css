@@ -18,7 +18,7 @@ header {
 
 .daily-picture {
     background: url('../images/stars.jpg') no-repeat center fixed; 
-    color: #C3DAF7;
+    color: #ededed; /* #C3DAF7; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -47,12 +47,12 @@ header {
 }
 
 #dateinput, #button {
-    background-color:#7190b0;
-    border-color: #425F89;
+    background-color:#ededed; /*#7190b0; */
+    border-color: #ededed; /* #425F89; */
 }
 
 .far.fa-calendar-alt {
-    color: #7190b0;
+    color: #ededed; /* #7190b0; */
     font-size: 20px !important;
 }
 
@@ -89,12 +89,12 @@ header {
 footer {
     text-align: center;
     padding: 0.5em;
-    color: #043C93;
+    color: white; /* #043C93; */
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    #photo {
+    #photo, #text {
         margin: 0 5%;
     }
   } 
