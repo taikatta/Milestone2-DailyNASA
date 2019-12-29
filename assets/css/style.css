@@ -6,7 +6,7 @@ body {
 }
 
 header, footer{
-    background-color: #C3DAF7 !important;
+    background-color: black !important; /* #C3DAF7 */
 }
 
 header {
