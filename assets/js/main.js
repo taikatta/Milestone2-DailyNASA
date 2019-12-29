@@ -7,6 +7,15 @@ document.getElementById('button').addEventListener('click', event => {
     document.getElementById('data-pro').innerHTML = "";
     const date = document.getElementById('dateinput').value;
 
+    var usaTime = new Date().toISOString("en-US", {timeZone: "America/Michigan"}).split("T")[0];
+    usaTime = new Date(usaTime);
+
+    if(date != new Date().toISOString().split("T")[0]) {
+        console.log("nem egyenlo");
+    } else {
+        console.log("egyenlo");
+    }
+
     // Warning if date is earlier then 1995-06-16 or is a future date
     if(date < "1995-06-16" || date > new Date().toISOString().split("T")[0]) {
         document.getElementById('data-pro').innerHTML = "Please enter a date between 16/06/1995 and today!";
