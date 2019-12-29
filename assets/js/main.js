@@ -5,6 +5,7 @@ document.getElementById('dateinput').valueAsDate = new Date();
 
 document.getElementById('button').addEventListener('click', event => {
     document.getElementById('data-pro').innerHTML = "";
+    document.getElementById('usa-date').innerHTML = "";
     const date = document.getElementById('dateinput').value;
 
     var usaTime = new Date().toISOString({timeZone: "America/Michigan"}).split("T")[0];
@@ -15,7 +16,6 @@ document.getElementById('button').addEventListener('click', event => {
         return;
     } else {
         console.log("egyenlo");
-        document.getElementById('usa-date').innerHTML = `NASA date is still ${usaTime}`;
     }
 
     // Warning if date is earlier then 1995-06-16 or is a future date
