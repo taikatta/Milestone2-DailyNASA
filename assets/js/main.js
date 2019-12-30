@@ -10,6 +10,7 @@ document.getElementById('button').addEventListener('click', event => {
 
     var usaTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"}).split("T")[0];
 
+    // Warning if the user is in a different timezone than NASA and NASA hasn't updated the photo yet
     if(usaTime != new Date().toISOString().split("T")[0]) {
         document.getElementById('usa-date').innerHTML = `NASA date is still ${usaTime}, please select another date.`;
         return;
