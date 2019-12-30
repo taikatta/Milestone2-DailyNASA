@@ -7,11 +7,11 @@ document.getElementById('button').addEventListener('click', event => {
     document.getElementById('data-pro').innerHTML = "";
     document.getElementById('usa-date').innerHTML = "";
     const date = document.getElementById('dateinput').value;
-
-    var usaTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"}).split("T")[0];
+    
+    var usaTime = formatDate(new Date().toLocaleString("en-US", {timeZone: "America/New_York"}).split("T")[0]);
 
     // Warning if the user is in a different timezone than NASA and NASA hasn't updated the photo yet
-    if(usaTime != new Date().toISOString().split("T")[0]) {
+    if(usaTime < date) {
         document.getElementById('usa-date').innerHTML = `NASA date is still ${usaTime}, please select another date.`;
         return;
     }
@@ -88,3 +88,18 @@ document.getElementById('button').addEventListener('click', event => {
                 danger + " potentially hazardous asteroid among them" + danger_name;
         });
 });
+
+
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) 
+        month = '0' + month;
+    if (day.length < 2) 
+        day = '0' + day;
+
+    return [year, month, day].join('-');
+}
