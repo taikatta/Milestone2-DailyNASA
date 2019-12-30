@@ -8,14 +8,11 @@ document.getElementById('button').addEventListener('click', event => {
     document.getElementById('usa-date').innerHTML = "";
     const date = document.getElementById('dateinput').value;
 
-    var usaTime = new Date().toISOString({timeZone: "America/Michigan"}).split("T")[0];
-    
+    var usaTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"}).split("T")[0];
+
     if(usaTime != new Date().toISOString().split("T")[0]) {
-        console.log("nem egyenlo");
         document.getElementById('usa-date').innerHTML = `NASA date is still ${usaTime}`;
         return;
-    } else {
-        console.log("egyenlo");
     }
 
     // Warning if date is earlier then 1995-06-16 or is a future date
