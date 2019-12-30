@@ -11,7 +11,7 @@ document.getElementById('button').addEventListener('click', event => {
     var usaTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"}).split("T")[0];
 
     if(usaTime != new Date().toISOString().split("T")[0]) {
-        document.getElementById('usa-date').innerHTML = `NASA date is still ${usaTime}`;
+        document.getElementById('usa-date').innerHTML = `NASA date is still ${usaTime}, please select another date.`;
         return;
     }
 
