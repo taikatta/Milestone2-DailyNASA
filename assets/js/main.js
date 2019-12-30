@@ -3,9 +3,13 @@
 dateinput.max = new Date().toISOString().split("T")[0];
 document.getElementById('dateinput').valueAsDate = new Date();
 
-document.getElementById('button').addEventListener('click', event => {
+document.getElementById('button').addEventListener('click', updatePage);
+
+
+function updatePage() {
     document.getElementById('data-pro').textContent = "";
     document.getElementById('usa-date').textContent = "";
+    document.getElementById('there_is_no_picture').textContent = "";
     const date = document.getElementById('dateinput').value;
     
     var usaTime = formatDate(new Date().toLocaleString("en-US", {timeZone: "America/New_York"}).split("T")[0]);
@@ -93,7 +97,7 @@ document.getElementById('button').addEventListener('click', event => {
                 "Estimated maximum diameter is: " + biggest.toFixed(2) + " meter.<br>" +
                 "There " + danger + " potentially hazardous asteroid among them" + danger_name;
         });
-});
+};
 
 
 function formatDate(date) {
