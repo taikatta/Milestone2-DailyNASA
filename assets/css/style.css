@@ -1,15 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap:100, 200, 300, 400, 500, 600, 700');
 
-@font-face {
-    font-family: "nasa-webfont";
-}
-
 body {
-    font-family: 'Open Sans', sans-serif;
-}
-
-#dailynasa {
-    font-family: 'nasa-webfont', sans-serif;
+    font-family: 'Open Sans', sans-serif; 
 }
 
 header, footer{
