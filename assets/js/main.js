@@ -13,7 +13,7 @@ document.getElementById('button').addEventListener('click', event => {
     // Warning if the user is in a different timezone than NASA and NASA hasn't updated the photo yet
     if(usaTime < date) {
         document.getElementById('usa-date').innerHTML = `NASA date is still ${usaTime}, please select another date.`;
-        return;
+       return;
     }
 
     // Warning if date is earlier then 1995-06-16 or is a future date
@@ -29,6 +29,7 @@ document.getElementById('button').addEventListener('click', event => {
 
     // Call api
     fetch(nasaUrl.toString())
+        //.then(handleErrors)
         .then(response => response.json())
         .then(response => {
             document.getElementById("expl_text").className = "expl_text1";
@@ -63,7 +64,7 @@ document.getElementById('button').addEventListener('click', event => {
         .then(response => response.json())
         .then(response => {
             let data = response.near_earth_objects[START_DATE];
-            let darab = response.element_count;
+            let count = response.element_count;
             var i = 0;
             var hazardous = false;
             var biggest = 0;
@@ -79,13 +80,14 @@ document.getElementById('button').addEventListener('click', event => {
                 }
                 i++;
             }
-            while (i < darab);
+            while (i < count);
             var danger = hazardous ? "is" : "is no";
             var danger_name = hazardous ? ", its name is: " + hazardous_name + "." : ".";
 
-            document.getElementById('yourneo').textContent = "Near Earth Objects. On " + date + " the number of near Earth objects is: " + 
-                response.element_count + ". Estimated maximum diameter is: " + biggest.toFixed(2) + " meter. There " + 
-                danger + " potentially hazardous asteroid among them" + danger_name;
+            document.getElementById('yourneo').innerHTML = "<h4>Near Earth Objects on " + date + ":</h4>" +
+                "The number of near Earth objects is: " + response.element_count +"<br>" +
+                "Estimated maximum diameter is: " + biggest.toFixed(2) + " meter.<br>" +
+                "There " + danger + " potentially hazardous asteroid among them" + danger_name;
         });
 });
 
@@ -103,3 +105,4 @@ function formatDate(date) {
 
     return [year, month, day].join('-');
 }
+
