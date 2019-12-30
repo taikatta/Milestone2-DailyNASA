@@ -83,6 +83,7 @@ Desktop View
 
 #### Features Left to Implement
 
+* Now I use a date picker and a button as well. An implementation would be to have only a date picker which should automatically submit.
 
 ## Technologies
 
