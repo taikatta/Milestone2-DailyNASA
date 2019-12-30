@@ -10,16 +10,20 @@ document.getElementById('button').addEventListener('click', event => {
     
     var usaTime = formatDate(new Date().toLocaleString("en-US", {timeZone: "America/New_York"}).split("T")[0]);
 
-    // Warning if the user is in a different timezone than NASA and NASA hasn't updated the photo yet
-    if(usaTime < date) {
-        document.getElementById('usa-date').innerHTML = `NASA date is still ${usaTime}, please select another date.`;
-       return;
-    }
 
     // Warning if date is earlier then 1995-06-16 or is a future date
     if(date < "1995-06-16" || date > new Date().toISOString().split("T")[0]) {
         document.getElementById('data-pro').innerHTML = "Please enter a date between 16/06/1995 and today!";
+        document.getElementById('title').textContent = "";
+        document.getElementById('explanation').textContent = "";
+        document.getElementById('yourneo').innerHTML = "";
         return;
+    }
+
+    // Warning if the user is in a different timezone than NASA and NASA hasn't updated the photo yet
+    if(usaTime < date) {
+        document.getElementById('usa-date').innerHTML = `NASA date is still ${usaTime}, please select another date.`;
+       return;
     }
 
     // Build url
@@ -105,4 +109,3 @@ function formatDate(date) {
 
     return [year, month, day].join('-');
 }
-
