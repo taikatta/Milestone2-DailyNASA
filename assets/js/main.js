@@ -4,8 +4,8 @@ dateinput.max = new Date().toISOString().split("T")[0];
 document.getElementById('dateinput').valueAsDate = new Date();
 
 document.getElementById('button').addEventListener('click', event => {
-    document.getElementById('data-pro').innerHTML = "";
-    document.getElementById('usa-date').innerHTML = "";
+    document.getElementById('data-pro').textContent = "";
+    document.getElementById('usa-date').textContent = "";
     const date = document.getElementById('dateinput').value;
     
     var usaTime = formatDate(new Date().toLocaleString("en-US", {timeZone: "America/New_York"}).split("T")[0]);
@@ -13,10 +13,10 @@ document.getElementById('button').addEventListener('click', event => {
 
     // Warning if date is earlier then 1995-06-16 or is a future date
     if(date < "1995-06-16" || date > new Date().toISOString().split("T")[0]) {
-        document.getElementById('data-pro').innerHTML = "Please enter a date between 16/06/1995 and today!";
+        document.getElementById('there_is_no_picture').textContent = "Please enter a date between 16/06/1995 and today!";
         document.getElementById('title').textContent = "";
         document.getElementById('explanation').textContent = "";
-        document.getElementById('yourneo').innerHTML = "";
+        document.getElementById('yourneo').textContent = "";
         return;
     }
 

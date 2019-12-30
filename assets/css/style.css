@@ -5,7 +5,7 @@ body {
 }
 
 header, footer{
-    background-color: black !important; /* #C3DAF7 */
+    background-color: black !important; 
 }
 
 header {
@@ -17,7 +17,7 @@ header {
 
 .daily-picture {
     background: url('../images/stars.jpg') no-repeat center fixed; 
-    color: #ededed; /* #C3DAF7; */
+    color: #ededed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -46,16 +46,15 @@ header {
 }
 
 #dateinput, #button {
-    background-color:#ededed; /*#7190b0; */
-    border-color: #ededed; /* #425F89; */
+    background-color:#ededed; 
+    border-color: #ededed; 
 }
 
 .far.fa-calendar-alt {
-    color: #ededed; /* #7190b0; */
+    color: #ededed; 
     font-size: 20px !important;
 }
 
-/* Embed video height https://stackoverflow.com/questions/35814653/automatic-height-when-embedding-a-youtube-video */
 #photo {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
@@ -88,7 +87,7 @@ header {
 footer {
     text-align: center;
     padding: 0.5em;
-    color: white; /* #043C93; */
+    color: white; 
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
