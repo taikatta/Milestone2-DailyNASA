@@ -102,6 +102,10 @@ Desktop View
 
 ## Testing
 
+#### Release notes
+
+I use `<input type="date">` and it works fine to bring up a date picker in Chrome and Firefox. However, Desktop Safati does not support the date input.
+
 ## Deployment
 
 This project was developed using the Visual Studio Code.
