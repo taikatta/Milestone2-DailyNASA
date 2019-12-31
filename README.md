@@ -102,6 +102,9 @@ Desktop View
 
 ## Testing
 
+I used [W3C Validator](https://validator.w3.org/) to check the markup validity of Web documents in HTML and CSS. Highlighted errors:
+* I used the same `id` in two different places
+
 #### Release notes
 
 I use `<input type="date">` and it works fine to bring up a date picker in Chrome and Firefox. However, Desktop Safati does not support the date input.
