@@ -14,9 +14,7 @@ The site owner advances their own goals by providing this functionality, potenti
 
 #### Main Technologies
 
-* Required: HTML, CSS, JavaScript.
-
-* Optional: jQuery, d3.js, crossfilter and/or dc.js, any other JavaScript libraries, SaSS, external APIs.
+* Required: HTML, CSS, JavaScript
 
 #### Daily NASA
 
@@ -46,7 +44,9 @@ For each API key, these limits are applied across all api.nasa.gov API requests.
 
 #### Fonts:
 
-I used Open Sans, from https://fonts.google.com/specimen/Open+Sans I have chosen Open Sans, as Udemy.com is also using them and I really liked it. On fonts.google.com in the about section the description of the font is the following: Open Sans was designed with an upright stress, open forms and a neutral, yet friendly appearance. It was optimized for print, web, and mobile interfaces, and has excellent legibility characteristics in its letterforms.
+I used Open Sans, from https://fonts.google.com/specimen/Open+Sans
+
+I have chosen Open Sans, as Udemy.com is also using them and I really liked it. On fonts.google.com in the about section the description of the font is the following: Open Sans was designed with an upright stress, open forms and a neutral, yet friendly appearance. It was optimized for print, web, and mobile interfaces, and has excellent legibility characteristics in its letterforms.
 
 #### Colors:
 
@@ -80,7 +80,7 @@ Desktop View
 
 * After successfully displaying the Picture of the Day (either it was an image or a video) I noticed that the height of the video was not set correctly. I have found the solution on [stackoverflow](https://stackoverflow.com/questions/35814653/automatic-height-when-embedding-a-youtube-video) 
 
-* At the Picture of the Day there is the Title of the picture and a short Explanation.
+* After the Picture of the Day there is the Title of the picture and a short Explanation.
 
 * After the image, title and explanation of the Picture of the Day, I added some information about near earth asteroids. On the chosen date the user will know the number of near Earth objects, the estimated maximum diameter of the largest asteroid and if there is potentially hazardous asteroid among them.
 
@@ -94,7 +94,7 @@ Desktop View
 * CSS
 * JavaScript
 * Visual Studio Code
-* Git - used for version control
+* Git
 * [GitHub](https://github.com/) 
 * [Font Awesome](https://fontawesome.com/) 
 * [Google Fonts](https://fonts.google.com/) 
