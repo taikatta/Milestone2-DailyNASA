@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap:100, 200, 300, 400, 500, 600, 700');
 
+/*------------------- General -------------------------*/
+
 body {
-    font-family: 'Open Sans', sans-serif; 
+    font-family: 'Open Sans', sans-serif;
 }
+
+/*-------------------Header, footer -------------------------*/
 
 header, footer{
     background-color: black !important; 
@@ -21,22 +25,10 @@ footer {
     color: white; 
 }
 
+/*-------------------Description on landing page-------------------------*/
+
 #text {
     text-align: justify;
-}
-
-.daily-picture {
-    background: url('../images/stars.jpg') no-repeat center fixed; 
-    color: #ededed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    padding: 20px 20px 0px 20px;
-    margin: 0;
-    background-attachment: scroll;
-    align-items: center; 
-    justify-content:center;
 }
 
 #expl_text {
@@ -46,6 +38,8 @@ footer {
 .expl_text1 {
     display: none;
 }
+
+/*-------------------Date picker -------------------------*/
 
 .date-picker {
     padding: 20px;
@@ -64,6 +58,8 @@ footer {
     color: #ededed; 
     font-size: 20px !important;
 }
+
+/*-------------------Picture of the day -------------------------*/
 
 #photo {
     position: relative;
@@ -87,12 +83,32 @@ footer {
     height: 100%;
 }
 
+#media_from_nasa {
+    border-radius: 8px;
+}
+
+.daily-picture {
+    background: url('../images/stars.jpg') no-repeat center fixed; 
+    color: #ededed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 20px 20px 0px 20px;
+    margin: 0;
+    background-attachment: scroll;
+    align-items: center; 
+    justify-content:center;
+}
+
 #title, #explanation, #yourneo {
     width: 100%;
     text-align: justify;
     padding: 10px;
     margin: 0;
 }
+
+/*-------------------Media Queries-------------------------*/
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
