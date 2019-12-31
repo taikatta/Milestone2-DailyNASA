@@ -27,6 +27,7 @@ function updatePage() {
 
     // Call api
     fetch(nasaUrl.toString())
+        .then(handleErrors)
         .then(response => response.json())
         .then(response => {
             document.getElementById("expl_text").className = "expl_text1";
@@ -37,7 +38,7 @@ function updatePage() {
             //Check if today's media is image or video
             const mediaElement = response.media_type === 'image' ? 'img' : 'iframe';
 
-            element = document.createElement(mediaElement);
+            var element = document.createElement(mediaElement);
             element.setAttribute('src', response.url);
             element.setAttribute('id', 'media_from_nasa');
             if (media) {
@@ -47,7 +48,23 @@ function updatePage() {
             }
             document.getElementById('title').textContent = response.title;
             document.getElementById('explanation').textContent = response.explanation;
-        });
+        })
+        .catch(error => {
+            const APOD = document.getElementById('photo');
+            const media = document.getElementById('media_from_nasa');
+
+            var element = document.createElement("img");
+            element.setAttribute('src', "assets/images/black.jpg");
+            element.setAttribute('id', 'media_from_nasa');
+            if (media) {
+                APOD.replaceChild(element, media);
+            } else {
+                APOD.appendChild(element);
+            }
+            document.getElementById('title').textContent = "";
+            document.getElementById('explanation').textContent = "";
+        }
+        );
 
     // Build url
     const neoUrl = new URL('https://api.nasa.gov/neo/rest/v1/feed');
@@ -58,6 +75,7 @@ function updatePage() {
 
     // Call api
     fetch(neoUrl.toString())
+        .then(handleErrors)
         .then(response => response.json())
         .then(response => {
             let data = response.near_earth_objects[date];
@@ -73,7 +91,7 @@ function updatePage() {
                 }
                 // Find the biggest asteroid
                 if (biggest < data[i].estimated_diameter.meters.estimated_diameter_max) {
-                    var biggest = data[i].estimated_diameter.meters.estimated_diameter_max;
+                    biggest = data[i].estimated_diameter.meters.estimated_diameter_max;
                 }
                 i++;
             }
@@ -85,6 +103,9 @@ function updatePage() {
                 "The number of near Earth objects is: " + response.element_count + "<br>" +
                 "Estimated maximum diameter is: " + biggest.toFixed(2) + " meter.<br>" +
                 "There " + danger + " potentially hazardous asteroid among them" + danger_name;
+        })
+        .catch(error => {
+            document.getElementById('yourneo').innerHTML = "No near Earth object.";
         });
 }
 
@@ -110,4 +131,11 @@ function dateValidator(date) {
     if (usaTime < date) {
         return "NASA date is still " + usaTime + ", please select another date.";
     }
+}
+
+function handleErrors(response) {
+    if (!response.ok) {
+        throw Error(response.statusText);
+    }
+    return response;
 }
