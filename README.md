@@ -154,11 +154,4 @@ All photos are from NASA.gov
 
 #### Acknowledgements
 
-
-
-
-
-
-
-
-
+Big thanks to my mentor, Narender Singh for supporting and encouraging me all through this work.
