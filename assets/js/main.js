@@ -13,7 +13,7 @@ function updatePage() {
 
     if (valid) {
         document.getElementById('validDate').innerHTML = valid;
-        document.getElementById('title').textContent = "";
+        document.getElementById('title').innerHTML = "";
         document.getElementById('explanation').textContent = "";
         document.getElementById('yourneo').textContent = "";
         return;
@@ -46,7 +46,7 @@ function updatePage() {
             } else {
                 APOD.appendChild(element);
             }
-            document.getElementById('title').textContent = response.title;
+            document.getElementById('title').innerHTML = "<h4>" + response.title + "</h4>";
             document.getElementById('explanation').textContent = response.explanation;
         })
         .catch(error => {
@@ -61,7 +61,7 @@ function updatePage() {
             } else {
                 APOD.appendChild(element);
             }
-            document.getElementById('title').textContent = "";
+            document.getElementById('title').innerHTML = "";
             document.getElementById('explanation').textContent = "";
         }
         );

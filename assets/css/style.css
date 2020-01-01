@@ -28,7 +28,7 @@ footer {
 /*-------------------Description on landing page-------------------------*/
 
 #text, #description {
-    text-align: justify;
+    text-align: center;
 }
 
 #expl_text {
@@ -43,6 +43,7 @@ footer {
 
 .date-picker {
     padding: 20px;
+    text-align: center;
 }
 
 #button {
