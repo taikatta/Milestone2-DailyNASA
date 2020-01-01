@@ -59,6 +59,9 @@ footer {
     font-size: 20px !important;
 }
 
+#validDate {
+    margin: 1em 0em;
+}
 /*-------------------Picture of the day -------------------------*/
 
 #photo {
@@ -112,7 +115,7 @@ footer {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    #photo, #text, #description, .date-picker  {
+    #photo, #text, #description, .date-picker, #validDate  {
         margin: 0 5%;
     }
   } 
