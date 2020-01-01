@@ -111,10 +111,7 @@ I used [Esprima](https://esprima.org/demo/validate.html) Syntax Validator to che
 
 #### Operational Test
 
-| Nr | Test          | Before image  | After image  | Test result |
-| ---|:-------------:| :-----:| :-----:| :-----:|
-| 1 | Using valid date      |    ![alt text](https://github.com/taikatta/Milestone2-DailyNASA/blob/master/assets/images/home.png "Home") |![alt text](https://github.com/taikatta/Milestone2-DailyNASA/blob/master/assets/images/dec12.png "Books") | Passed |
-| 2 | Using invalid date      |   ![alt text](https://github.com/taikatta/Milestone2-DailyNASA/blob/master/assets/images/invalid_date1.png "Home") |![alt text](https://github.com/taikatta/Milestone2-DailyNASA/blob/master/assets/images/invalid_date2.png "Gallery") |Passed |
+
 
 #### Release notes
 
