@@ -64,9 +64,9 @@ Originally I wanted to use NASA's logo on the landing page, but then I have foun
 
 #### Final Wireframes:
 
-Mobile View
+[Mobile View](https://github.com/taikatta/Milestone2-DailyNASA/blob/master/wireframes/final_design_mobile.pdf)
 
-Desktop View
+[Desktop View](https://github.com/taikatta/Milestone2-DailyNASA/blob/master/wireframes/final_design_desktop.pdf)
 
 ## Features
 
