@@ -109,6 +109,10 @@ I used [W3C Validator](https://validator.w3.org/) to check the markup validity o
 
 I used [Esprima](https://esprima.org/demo/validate.html) Syntax Validator to check main.js, the code was syntactically valid.
 
+#### Querying nonexistent data from NASA
+
+In order to execute the test first I disabled the  `dateValidator` function in main.js and then picked a future/past date with no picture and near Earth object information. (Past images are stored in the APOD Archive, with the first image appearing on June 16, 1995 - from Wikipedia.)
+
 #### Operational Test
 
 | Nr | Test          | Before image  | After image  | Test result |
