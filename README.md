@@ -44,7 +44,7 @@ For each API key, these limits are applied across all api.nasa.gov API requests.
 
 #### Fonts:
 
-I used Open Sans, from https://fonts.google.com/specimen/Open+Sans
+I used Open Sans, from [Google Fonts](https://fonts.google.com/specimen/Open+Sans)
 
 I have chosen Open Sans, as Udemy.com is also using them and I really liked it. On fonts.google.com in the about section the description of the font is the following: Open Sans was designed with an upright stress, open forms and a neutral, yet friendly appearance. It was optimized for print, web, and mobile interfaces, and has excellent legibility characteristics in its letterforms.
 
@@ -102,12 +102,23 @@ Desktop View
 
 ## Testing
 
+Throughout the development of the project, I carried out testing. I used the Chrome Developer Tools consistently, so I could fix error before I saved my work.
+
 I used [W3C Validator](https://validator.w3.org/) to check the markup validity of Web documents in HTML and CSS. Highlighted errors:
 * I used the same `id` in two different places
 
+I used [Esprima](https://esprima.org/demo/validate.html) Syntax Validator to check main.js, the code was syntactically valid.
+
+#### Operational Test
+
+| Nr | Test          | Before image  | After image  | Test result |
+| ---|:-------------:| :-----:| :-----:| :-----:|
+| 1 | Using valid date      |    ![alt text](https://github.com/taikatta/Milestone2-DailyNASA/blob/master/assets/images/home.png "Home") |![alt text](https://github.com/taikatta/Milestone2-DailyNASA/blob/master/assets/images/dec12.png "Books") | Passed |
+| 2 | Using invalid date      |   ![alt text](https://github.com/taikatta/Milestone2-DailyNASA/blob/master/assets/images/invalid_date1.png "Home") |![alt text](https://github.com/taikatta/Milestone2-DailyNASA/blob/master/assets/images/invalid_date2.png "Gallery") |Passed |
+
 #### Release notes
 
-I use `<input type="date">` and it works fine to bring up a date picker in Chrome and Firefox. However, Desktop Safati does not support the date input.
+I use `<input type="date">` and it works fine to bring up a date picker in Chrome and Firefox. However, Desktop Safari does not support the date input.
 
 ## Deployment
 
