@@ -12,7 +12,7 @@ html, body {
 
 header {
     height: 3em;
-    padding-top: 0.7em;
+    padding-top: 1em;
     padding-left: 5em; 
 }
 
@@ -110,14 +110,6 @@ footer {
 }
 
 /*-------------------Media Queries-------------------------*/
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    header {
-        text-align: center;
-        padding: 0; 
-    }
-}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
