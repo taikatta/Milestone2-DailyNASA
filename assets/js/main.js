@@ -1,7 +1,6 @@
 const api_key = '77d3ZAFkI96vA4EA6dPuFyNBI0sEDuI87tbTjTY9';
 
 // Init date input
-// Disable future dates, the solution is from: https://stackoverflow.com/
 
 document.getElementById('dateinput').valueAsDate = new Date();
 
@@ -122,6 +121,8 @@ function formatDate(date) {
 
     return [year, month, day].join('-');
 }
+
+// Disable future dates, the solution is from: https://stackoverflow.com/
 
 function dateValidator(date) {
     if (date < "1995-06-16" || date > new Date().toISOString().split("T")[0]) {
