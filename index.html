@@ -16,33 +16,40 @@
 <body>
     <header>
         <a href="index.html">
-            <img src="assets/images/dailynasa_white.png" alt="Daily NASA">
+            <img src="assets/images/dailynasa.png" alt="Daily NASA">
         </a>
     </header>
     <section id="APOD" class="daily-picture">
-        <div id="text">
-            <h4>Astronomy Picture of the Day</h4>
-            <p id="expl_text">Discover the cosmos, NASA is here to help you! <br> The pictures and descriptions often relate
-                to current events in astronomy and space exploration.</p>
-            <p>Each day a different image or video is featured, please select the date:</p>
-        </div>
-        <div class="date-picker">
-            <i class="far fa-calendar-alt"></i>
-            <input type="date" id="dateinput" min="1995-06-16">
-           
-            <button id="button">Get picture of the day</button>
+        <div class="content">
+            <div id="text">
+                <h4>Astronomy Picture of the Day</h4>
+                <p id="expl_text">Discover the cosmos, NASA is here to help you!
+                    <br> The first astronomy picture of the day appeared on June 16, 1995.
+                    <br>
+                    The pictures and descriptions often relate
+                    to current events in astronomy and space exploration.</p>
+                <p>Each day a different image or video of our universe is featured,
+                    along with a brief explanation written by a professional astronomer,
+                    please select the date:</p>
+            </div>
+            <div class="date-picker">
+                <i class="far fa-calendar-alt"></i>
+                <input type="date" id="dateinput" min="1995-06-16">
+
+                <button id="button">Get picture of the day</button>
+                <br />
+            </div>
+            <p id="validDate"></p>
+            <div id="photo">
+                <img src="assets/images/hubble-observes-one-of-a-kind-star-nicknamed-nasty.jpg" id="media_from_nasa"
+                    title="NASA Hubble photo">
+            </div>
             <br />
-        </div>
-        <p id="validDate"></p>
-        <div id="photo">
-            <img src="assets/images/hubble-observes-one-of-a-kind-star-nicknamed-nasty.jpg" id="media_from_nasa"
-                title="NASA Hubble photo">
-        </div>
-        <br />
-        <div id="description">
-            <p id="title"></p>
-            <p id="explanation"></p>
-            <p id="yourneo"></p>
+            <div id="description">
+                <p id="title"></p>
+                <p id="explanation"></p>
+                <p id="yourneo"></p>
+            </div>
         </div>
     </section>
     <footer>

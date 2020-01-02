@@ -2,15 +2,13 @@
 
 /*------------------- General -------------------------*/
 
-body {
+html, body {
     font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    margin: 0;
 }
 
 /*-------------------Header, footer -------------------------*/
-
-header, footer{
-    background-color: black !important; 
-}
 
 header {
     height: 3em;
@@ -20,9 +18,10 @@ header {
 }
 
 footer {
+    color: black;
     text-align: center;
-    padding: 0.5em;
-    color: white; 
+    height: 60px;
+    margin-top: -50px;
 }
 
 /*-------------------Description on landing page-------------------------*/
@@ -92,17 +91,11 @@ footer {
 }
 
 .daily-picture {
-    background: url('../images/stars.jpg') no-repeat center fixed; 
-    color: #ededed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    padding: 20px 20px 0px 20px;
-    margin: 0;
-    background-attachment: scroll;
-    align-items: center; 
-    justify-content:center;
+    min-height: 100%;
+} 
+
+.content {
+    padding: 20px;
 }
 
 #title, #explanation, #yourneo {
