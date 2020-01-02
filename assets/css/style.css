@@ -61,6 +61,7 @@ footer {
 #validDate {
     margin: 1em 0em;
 }
+
 /*-------------------Picture of the day -------------------------*/
 
 #photo {
@@ -103,6 +104,10 @@ footer {
     text-align: justify;
     /* padding: 10px; */
     margin: 0;
+}
+
+#yourneo {
+    padding-bottom: 10px;
 }
 
 /*-------------------Media Queries-------------------------*/

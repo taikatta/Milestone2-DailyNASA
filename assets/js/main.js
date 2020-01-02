@@ -98,10 +98,10 @@ function updatePage() {
             var danger = hazardous ? "is" : "is no";
             var danger_name = hazardous ? ", its name is: " + hazardous_name + "." : ".";
 
-            document.getElementById('yourneo').innerHTML = "<h4>Near Earth Objects on " + date + ":</h4>" +
-                "The number of near Earth objects is: " + response.element_count + "<br>" +
+            document.getElementById('yourneo').innerHTML = "<br><h4>Near Earth Objects on " + date + ":</h4>" +
+                "The number of near Earth objects is: " + response.element_count + ".<br>" +
                 "Estimated maximum diameter is: " + biggest.toFixed(2) + " meter.<br>" +
-                "There " + danger + " potentially hazardous asteroid among them" + danger_name;
+                "There " + danger + " potentially hazardous asteroid among them" + danger_name + "<br>";
         })
         .catch(error => {
             document.getElementById('yourneo').innerHTML = "No near Earth object.";
