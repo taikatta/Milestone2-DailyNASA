@@ -12,7 +12,6 @@ html, body {
 
 header {
     height: 3em;
-    text-align: left;
     padding-top: 0.7em;
     padding-left: 5em; 
 }
@@ -81,9 +80,10 @@ footer {
 #photo img {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    width: auto;
     height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #media_from_nasa {
@@ -102,7 +102,6 @@ footer {
 #title, #explanation, #yourneo {
     width: 100%;
     text-align: justify;
-    /* padding: 10px; */
     margin: 0;
 }
 
@@ -125,4 +124,4 @@ footer {
     #photo, #text, #description, .date-picker, #validDate  {
         margin: 0 5%;
     }
-  } 
+  }
