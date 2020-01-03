@@ -50,7 +50,7 @@ I have chosen Open Sans, as Udemy.com is also using them and I really liked it. 
 
 #### Colors:
 
-First I used https://www.canva.com/colors/color-palette-generator/ color palette generator with NASA's logo and used the colors I got there for the website. (Dark blue and lighter blue.) But then I switched to black background and white fonts. For the date input form background I used #ededed, which is a light gray color.
+First I used https://www.canva.com/colors/color-palette-generator/ color palette generator with NASA's logo and used the colors I got there for the website. (Dark blue and lighter blue.) Then I switched to black background and white fonts. For the date input form background I used #ededed, which is a light gray color. As most of the photos were dark, I changed the background color to white and the fonts color to black. This became the final version.
 
 #### Wireframes:
 
@@ -102,7 +102,7 @@ Originally I wanted to use NASA's logo on the landing page, but then I have foun
 
 ## Testing
 
-Throughout the development of the project, I carried out testing. I used the Chrome Developer Tools consistently, so I could fix error before I saved my work.
+Throughout the development of the project, I carried out testing. I used the Chrome Developer Tools consistently, so I could fix errors before I saved my work.
 
 I used [W3C Validator](https://validator.w3.org/) to check the markup validity of Web documents in HTML and CSS. Highlighted errors:
 * I used the same `id` in two different places
