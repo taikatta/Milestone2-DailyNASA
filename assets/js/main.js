@@ -1,15 +1,12 @@
 const api_key = '77d3ZAFkI96vA4EA6dPuFyNBI0sEDuI87tbTjTY9';
 
 // Init date input
-
 document.getElementById('dateinput').valueAsDate = new Date();
-
 document.getElementById('button').addEventListener('click', updatePage);
 
 function updatePage() {
     const date = document.getElementById('dateinput').value;
     const valid = dateValidator(date);
-
     if (valid) {
         document.getElementById('validDate').innerHTML = valid;
         document.getElementById('title').innerHTML = '';
@@ -33,7 +30,6 @@ function updatePage() {
 
             //Check if today's media is image or video
             const mediaElement = response.media_type === 'image' ? 'img' : 'iframe';
-
             updateMedia(
                 mediaElement,
                 response.url,
@@ -55,7 +51,6 @@ function updatePage() {
     neoUrl.searchParams.set('start_date', date);
     neoUrl.searchParams.set('end_date', date);
     neoUrl.searchParams.set('api_key', api_key);
-
 
     // Call api
     fetch(neoUrl.toString())
@@ -98,17 +93,14 @@ function formatDate(date) {
         month = '' + (d.getMonth() + 1),
         day = '' + d.getDate(),
         year = d.getFullYear();
-
     if (month.length < 2)
         month = '0' + month;
     if (day.length < 2)
         day = '0' + day;
-
     return [year, month, day].join('-');
 }
 
 // Disable future dates, the solution is from: https://stackoverflow.com/
-
 function dateValidator(date) {
     if (date < '1995-06-16' || date > new Date().toISOString().split('T')[0]) {
         return 'Please enter a date between 16/06/1995 and today!';
@@ -129,7 +121,6 @@ function handleErrors(response) {
 function updateMedia(media_type, url, title, explanation) {
     const APOD = document.getElementById('photo');
     const media = document.getElementById('media_from_nasa');
-
     var element = document.createElement(media_type);
     element.setAttribute('src', url);
     element.setAttribute('id', 'media_from_nasa');
