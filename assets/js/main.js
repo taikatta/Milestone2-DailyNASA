@@ -31,39 +31,24 @@ function updatePage() {
         .then(response => {
             document.getElementById("expl_text").className = "expl_text1";
 
-            const APOD = document.getElementById('photo');
-            const media = document.getElementById('media_from_nasa');
-
             //Check if today's media is image or video
             const mediaElement = response.media_type === 'image' ? 'img' : 'iframe';
 
-            var element = document.createElement(mediaElement);
-            element.setAttribute('src', response.url);
-            element.setAttribute('id', 'media_from_nasa');
-            if (media) {
-                APOD.replaceChild(element, media);
-            } else {
-                APOD.appendChild(element);
-            }
-            document.getElementById('title').innerHTML = "<h4>" + response.title + "</h4>";
-            document.getElementById('explanation').textContent = response.explanation;
+            updateMedia(
+                mediaElement,
+                response.url,
+                "<h4>" + response.title + "</h4>",
+                response.explanation
+            )
         })
         .catch(error => {
-            const APOD = document.getElementById('photo');
-            const media = document.getElementById('media_from_nasa');
-
-            var element = document.createElement("img");
-            element.setAttribute('src', "assets/images/black.jpg");
-            element.setAttribute('id', 'media_from_nasa');
-            if (media) {
-                APOD.replaceChild(element, media);
-            } else {
-                APOD.appendChild(element);
-            }
-            document.getElementById('title').innerHTML = "";
-            document.getElementById('explanation').textContent = "";
-        }
-        );
+            updateMedia(
+                'img',
+                'assets/images/black.jpg',
+                '',
+                ''
+            )
+        });
 
     // Build url
     const neoUrl = new URL('https://api.nasa.gov/neo/rest/v1/feed');
@@ -139,4 +124,20 @@ function handleErrors(response) {
         throw Error(response.statusText);
     }
     return response;
+}
+
+function updateMedia(media_type, url, title, explanation) {
+    const APOD = document.getElementById('photo');
+    const media = document.getElementById('media_from_nasa');
+
+    var element = document.createElement(media_type);
+    element.setAttribute('src', url);
+    element.setAttribute('id', 'media_from_nasa');
+    if (media) {
+        APOD.replaceChild(element, media);
+    } else {
+        APOD.appendChild(element);
+    }
+    document.getElementById('title').innerHTML = title 
+    document.getElementById('explanation').textContent = explanation;
 }
