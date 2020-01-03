@@ -6,7 +6,7 @@ This is my second Milestone Project on the Full Stack Web Developer Code Institu
 
 #### Project purpose: Presentation of interacitve data
 
-In this project, you'll build an interactive front-end site. The site should respond to the users' actions, allowing users to actively engage with data, alter the way the site displays the information to achieve their preferred goals.
+In this project, you'll build an interactive front-end site. The site should respond to the users actions, allowing users to actively engage with data, alter the way the site displays the information to achieve their preferred goals.
 
 Value provided:
 Users are able to interact with the site in their particular way, to achieve their personal goals and derive answers to their specific questions.
@@ -117,8 +117,8 @@ In order to execute the test first I disabled the  `dateValidator` function in m
 
 | Nr | Test          | Before image  | After image  | Test result |
 | ---|:-------------:| :-----:| :-----:| :-----:|
-| 1 | Using valid date      |    ![alt text](https://github.com/taikatta/Milestone2-DailyNASA/blob/master/assets/images/home.png "Home") |![alt text](https://github.com/taikatta/Milestone2-DailyNASA/blob/master/assets/images/dec12.png "Books") | Passed |
-| 2 | Using invalid date      |   ![alt text](https://github.com/taikatta/Milestone2-DailyNASA/blob/master/assets/images/invalid_date1.png "Home") |![alt text](https://github.com/taikatta/Milestone2-DailyNASA/blob/master/assets/images/invalid_date2.png "Gallery") |Passed |
+| 1 | Using valid date      |    ![alt text](https://github.com/taikatta/Milestone2-DailyNASA/blob/master/assets/images/home.png "Home") |![alt text](https://github.com/taikatta/Milestone2-DailyNASA/blob/master/assets/images/dec12.png "12/12/2019") | Passed |
+| 2 | Using invalid date      |   ![alt text](https://github.com/taikatta/Milestone2-DailyNASA/blob/master/assets/images/invalid_date1.png "Home") |![alt text](https://github.com/taikatta/Milestone2-DailyNASA/blob/master/assets/images/invalid_date2.png "12/12/2020") |Passed |
 
 #### Release notes
 
