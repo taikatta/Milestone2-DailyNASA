@@ -12,12 +12,12 @@ function updatePage() {
 
     if (valid) {
         document.getElementById('validDate').innerHTML = valid;
-        document.getElementById('title').innerHTML = "";
-        document.getElementById('explanation').textContent = "";
-        document.getElementById('yourneo').textContent = "";
+        document.getElementById('title').innerHTML = '';
+        document.getElementById('explanation').textContent = '';
+        document.getElementById('yourneo').textContent = '';
         return;
     }
-    document.getElementById('validDate').innerHTML = "";
+    document.getElementById('validDate').innerHTML = '';
 
     // Build url
     const nasaUrl = new URL('https://api.nasa.gov/planetary/apod');
@@ -29,7 +29,7 @@ function updatePage() {
         .then(handleErrors)
         .then(response => response.json())
         .then(response => {
-            document.getElementById("expl_text").className = "expl_text1";
+            document.getElementById('expl_text').className = 'expl_text1';
 
             //Check if today's media is image or video
             const mediaElement = response.media_type === 'image' ? 'img' : 'iframe';
@@ -37,7 +37,7 @@ function updatePage() {
             updateMedia(
                 mediaElement,
                 response.url,
-                "<h4>" + response.title + "</h4>",
+                '<h4>' + response.title + '</h4>',
                 response.explanation
             )
         })
@@ -80,16 +80,16 @@ function updatePage() {
                 i++;
             }
             while (i < count);
-            var danger = hazardous ? "is" : "is no";
-            var danger_name = hazardous ? ", its name is: " + hazardous_name + "." : ".";
+            var danger = hazardous ? 'is' : 'is no';
+            var danger_name = hazardous ? ', its name is: ' + hazardous_name + '.' : '.';
 
-            document.getElementById('yourneo').innerHTML = "<br><h4>Near Earth Objects on " + date + ":</h4>" +
-                "The number of near Earth objects is: " + response.element_count + ".<br>" +
-                "Estimated maximum diameter is: " + biggest.toFixed(2) + " meter.<br>" +
-                "There " + danger + " potentially hazardous asteroid among them" + danger_name + "<br>";
+            document.getElementById('yourneo').innerHTML = '<br><h4>Near Earth Objects on ' + date + ':</h4>' +
+                'The number of near Earth objects is: ' + response.element_count + '.<br>' +
+                'Estimated maximum diameter is: ' + biggest.toFixed(2) + ' meter.<br>' +
+                'There ' + danger + ' potentially hazardous asteroid among them' + danger_name + '<br>';
         })
         .catch(error => {
-            document.getElementById('yourneo').innerHTML = "No near Earth object.";
+            document.getElementById('yourneo').innerHTML = 'No near Earth object.';
         });
 }
 
@@ -110,12 +110,12 @@ function formatDate(date) {
 // Disable future dates, the solution is from: https://stackoverflow.com/
 
 function dateValidator(date) {
-    if (date < "1995-06-16" || date > new Date().toISOString().split("T")[0]) {
-        return "Please enter a date between 16/06/1995 and today!";
+    if (date < '1995-06-16' || date > new Date().toISOString().split('T')[0]) {
+        return 'Please enter a date between 16/06/1995 and today!';
     }
-    var usaTime = formatDate(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }).split("T")[0]);
+    var usaTime = formatDate(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' }).split('T')[0]);
     if (usaTime < date) {
-        return "NASA date is still " + usaTime + ", please select another date.";
+        return 'NASA date is still ' + usaTime + ', please select another date.';
     }
 }
 
